@@ -6,6 +6,8 @@
     <title>X-Ray AI Diagnosis</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="manifest" href="manifest.json">
+
 </head>
 <body>
     <header>
@@ -176,5 +178,13 @@
         
 
     </script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log("Service Worker Registered"))
+      .catch(err => console.error("Service Worker Registration Failed", err));
+  }
+</script>
+
 </body>
 </html>
