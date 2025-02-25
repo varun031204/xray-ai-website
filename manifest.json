@@ -1,0 +1,21 @@
+{
+    "name": "X-Ray AI Diagnosis",
+    "short_name": "X-Ray AI",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#004466",
+    "icons": [
+      {
+        "src": "abcd.jpg",
+        "sizes": "192x192",
+        "type": "image/jpg"
+      },
+      {
+        "src": "abcd.jpg",
+        "sizes": "512x512",
+        "type": "image/jpg"
+      }
+    ]
+  }
+  
