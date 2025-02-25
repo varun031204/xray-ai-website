@@ -1,0 +1,290 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+  background-color: #004080;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center; /* Centering nav items */
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-scroll {
+  background-color: rgba(0, 64, 128, 0.95);
+  backdrop-filter: blur(10px);
+  height: 60px;
+}
+
+.navbar-logo {
+  position: absolute; /* Positioning the logo at the leftmost part */
+  left: 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-nav li {
+  margin-left: 20px;
+}
+
+.navbar-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar-nav a:hover {
+  background-color: #00509e;
+}
+
+
+/* Hero Section */
+.hero {
+  background: url('services-hero.jpg') center/cover no-repeat;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 64, 128, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+/* Background Vectors */
+.bg-vectors {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.vector-1 {
+  fill: #004080;
+  animation: vectorMove 20s infinite linear;
+}
+
+.vector-2 {
+  fill: #00796b;
+  animation: vectorMove 25s infinite linear reverse;
+}
+
+@keyframes vectorMove {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(100px, 100px) rotate(360deg); }
+}
+
+
+/* (Original Services Section removed in favor of timeline cards) */
+
+/* Footer */
+footer {
+  background: linear-gradient(180deg, #004080 0%, #003366 100%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #4fc3f7;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .navbar-nav li {
+    margin-left: 10px;
+  }
+  .navbar a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* --- Timeline Section Styles --- */
+.timeline {
+  width: 90%;
+  margin: 120px auto;
+  text-align: center;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* Vertical center line */
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #ccc;
+}
+
+/* Timeline item base styles */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Left-aligned items */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+  transform: translateX(-100px);
+}
+
+/* Right-aligned items */
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+  transform: translateX(100px);
+}
+
+/* When in view, animate to original position */
+.timeline-item.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Connector lines from the central vertical line */
+.timeline-item.left::after,
+.timeline-item.right::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 2px;
+  background-color: #004080;
+}
+
+.timeline-item.left::after {
+  right: -20px;
+}
+
+.timeline-item.right::after {
+  left: -20px;
+}
+
+/* Timeline content styling */
+.timeline-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Service Card Content within Timeline */
+.timeline-content i {
+  font-size: 40px;
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.timeline-content .service-content h3 {
+  font-size: 20px;
+  color: #004080;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-content .service-content p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.timeline-content .proceed-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.timeline-content .proceed-btn:hover {
+  background-color: #00509e;
+}
