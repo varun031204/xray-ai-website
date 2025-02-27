@@ -120,8 +120,14 @@ input[type="password"] {
         transform: translateX(0);
     }
 }
+.or-login {
+    text-align: center;
+    color: #888;
+    margin: 20px 0;
+}
 .login-link {
     text-align: center;
+    color:#888;
     margin-top: 10px;
 }
 .login-link a {
