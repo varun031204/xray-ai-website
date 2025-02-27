@@ -259,18 +259,64 @@ hr {
 
 
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 32px;
+  .navbar-nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    display: none;
   }
-  #heading {
-    font-size: 28px;
+
+  .navbar-nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    display: flex;
   }
+
   .navbar-nav li {
-    margin-left: 10px;
+    margin: 0;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
   }
-  .navbar a {
-    font-size: 14px;
-    padding: 8px 12px;
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate hamburger menu */
+  .menu-toggle.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+
+  .menu-toggle {
+    display: flex;
   }
   .timeline-item {
     flex-direction: column;
