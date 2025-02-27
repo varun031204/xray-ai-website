@@ -40,7 +40,25 @@
             <!-- Full Cover Side Section with Background Image -->
             <div class="side-section"></div>
         </div>
-        <script>
+        <script type="module">
+  // Import Firebase SDK
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+  // Firebase Config (Replace with your actual config)
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAfj-Gm5k5K_x3neoKDNo34arfy9W7GYeQ",
+  authDomain: "x-ray-ai.firebaseapp.com",
+  projectId: "x-ray-ai",
+  storageBucket: "x-ray-ai.firebasestorage.app",
+  messagingSenderId: "970642208082",
+  appId: "1:970642208082:web:80ecf760190d1ac10ef68b",
+  measurementId: "G-KMMM61334B"
+};
+            const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+        
             document.querySelector("form").addEventListener("submit", function(event) {
                 event.preventDefault(); // Prevent the form from submitting to a server
         
@@ -66,6 +84,9 @@
                 // Redirect to the login page
                 window.location.href = "index.html";
           });
+              .catch((error) => {
+        alert(error.message);
+      });
         </script>
         
 
