@@ -120,6 +120,18 @@ input[type="password"] {
         transform: translateX(0);
     }
 }
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+}
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}
 
 
 /* Right Side Section with Full Image Cover */
