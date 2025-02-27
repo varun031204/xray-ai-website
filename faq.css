@@ -58,76 +58,83 @@ body {
     background-color: #b4b4b4;
 }
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle div {
-    width: 30px;
-    height: 3px;
-    background: black;
-    margin: 5px 0;
-    transition: all 0.3s ease;
+ain {
+    margin-top: 80px;
+    padding: 40px 20px;
 }
 
 /* Content Section */
 .content {
     max-width: 1200px;
-    margin: 80px auto;
+    margin: 0 auto;
     padding: 20px;
-    text-align: center;
 }
 
 /* Heading Styles */
 h1 {
-    font-size: 35px;
-    color: #004080;
+    font-size: 2.5rem;
+    color: black;
     margin-bottom: 40px;
     text-align: center;
-    font-weight: bold;
 }
 
-/* FAQ Section */
-.faq-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
-}
-
+/* FAQ Item Styles */
 .faq-item {
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
 }
 
 .faq-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .faq-item h2 {
-    font-size: 22px;
-    color: #004080;
+    font-size: 1.8rem;
+    color: black;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .faq-item p {
-    font-size: 16px;
-    color: black;
+    font-size: 1rem;
+    color: #555;
     display: none;
-    transition: max-height 0.3s ease-in-out;
+    margin-top: 15px;
 }
 
 .faq-item.active p {
     display: block;
+}
+
+
+.bg-vectors {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.vector-1 {
+  fill: #004080;
+  animation: vectorMove 20s infinite linear;
+}
+
+.vector-2 {
+  fill: #00796b;
+  animation: vectorMove 25s infinite linear reverse;
+}
+
+@keyframes vectorMove {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(100px, 100px) rotate(360deg); }
 }
 
 /* Footer Styles */
@@ -264,89 +271,6 @@ hr {
     font-size: 14px;
     padding: 8px 12px;
   }
-  .navbar-nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .navbar-nav.active {
-    transform: translateY(0);
-  }
-
-  .navbar-nav li {
-    margin: 0;
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
-  }
-  /* Mobile Navbar */
-@media (max-width: 768px) {
-  .navbar-nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 0;
-    display: none;
-  }
-
-  .navbar-nav.active {
-    transform: translateY(0);
-    opacity: 1;
-    display: flex;
-  }
-
-  .navbar-nav li {
-    margin: 0;
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-  }
-
-  .menu-toggle div {
-    width: 30px;
-    height: 3px;
-    background: black;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-  }
-
-  /* Animate hamburger menu */
-  .menu-toggle.active div:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .menu-toggle.active div:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active div:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-}
-
-
-  .menu-toggle {
-    display: flex;
-  }
   .timeline-item {
     flex-direction: column;
     text-align: center;
@@ -376,6 +300,6 @@ hr {
 
 .footer-info {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 10px;
 }
 }
