@@ -58,8 +58,9 @@ const firebaseConfig = {
 };
             const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-        
-            document.querySelector("form").addEventListener("submit", function(event) {
+        </script>
+           <script type="module"> 
+               document.querySelector("form").addEventListener("submit", function(event) {
                 event.preventDefault(); // Prevent the form from submitting to a server
         
                 // Validate input fields (optional)
