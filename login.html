@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | X-Vision AI</title>
+    <link rel="stylesheet" href="login.css">
+    <script type="module" src="login.js " defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="content">
+                <h1>Welcome Back!</h1>
+                <p class="description">
+                    <b>This is a responsive website for X-Ray AI Diagnosis, designed to provide information about AI-powered medical diagnostics. The platform helps detect diseases from X-ray images with high accuracy, aiding healthcare professionals in making informed decisions.</b>
+                </p>
+                
+
+                <form>
+                    
+                    <input type="email" placeholder="Enter your email" required>
+                    <input type="password" placeholder="Password" required>
+                    <div class="terms">
+                        <input type="checkbox" id="agree">
+                        <label for="agree">By logging in, I agree to X-Vision's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+                    </div>
+
+
+                    <button type="submit" class="login-btn">Login</button>
+
+                    <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+                    
+                    
+                </form>
+            </div>
+
+            <!-- Full Cover Side Section with Background Image -->
+            <div class="side-section"></div>
+        </div>
+        <script>
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the form from submitting to a server
+        
+                // Validate input fields (optional)
+                const email = document.querySelector("input[type='email']").value;
+                const password = document.querySelector("input[type='password']").value;
+                const agree = document.getElementById("agree").checked;
+        
+                if (!email || !password ||  !agree) {
+                    alert("Please fill out all fields and agree to the terms.");
+                    return;
+                }
+        
+                
+                // Simulate account creation (In a real app, you would send this data to a server)
+                alert("Login Successfull");
+                sessionStorage.setItem("loggedIn", "true");
+        
+                // Redirect to the login page
+                window.location.href = "index.html";
+            });
+        </script>
+        
+
+        
+</body>
+</html>
