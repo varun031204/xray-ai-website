@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | X-Vision AI</title>
     <link rel="stylesheet" href="login.css">
-    <Script type="module" src="login.js " defer></script>
-    <Script type="module" src="fb.js " defer></script>
+    <script type="module" src="login.js " defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -20,8 +19,8 @@
 
                 <form>
                     
-                    <input type="email" placeholder="Enter your email" id="email" required>
-                    <input type="password" placeholder="Password" id="password required>
+                    <input type="email" placeholder="Enter your email" required>
+                    <input type="password" placeholder="Password" required>
                     <div class="terms">
                         <input type="checkbox" id="agree">
                         <label for="agree">By logging in, I agree to X-Vision's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
@@ -29,7 +28,7 @@
                     <div class="g-recaptcha" data-sitekey="6LdAKeQqAAAAAEISkFuDX0ubdCcyC6U0pD6OcQog"></div>
 
 
-                    <button id="submit" type="submit" class="login-btn">Login</button>
+                    <button type="submit" class="login-btn">Login</button>
 
                     <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
                     
@@ -50,7 +49,6 @@
                 const password = document.querySelector("input[type='password']").value;
                 const agree = document.getElementById("agree").checked;
                 const captchaResponse = grecaptcha.getResponse();
-        
                 if (!email || !password ||  !agree) {
                     alert("Please fill out all fields and agree to the terms.");
                     return;
@@ -58,7 +56,7 @@
                 if (!captchaResponse) {
             alert("Please verify that you are not a robot.");
             return;
-      }
+        }
         
                 
                 // Simulate account creation (In a real app, you would send this data to a server)
@@ -67,7 +65,7 @@
         
                 // Redirect to the login page
                 window.location.href = "index.html";
-              });
+          });
         </script>
         
 
