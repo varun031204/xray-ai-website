@@ -49,6 +49,7 @@
                 const email = document.querySelector("input[type='email']").value;
                 const password = document.querySelector("input[type='password']").value;
                 const agree = document.getElementById("agree").checked;
+                const captchaResponse = grecaptcha.getResponse();
         
                 if (!email || !password ||  !agree) {
                     alert("Please fill out all fields and agree to the terms.");
@@ -57,7 +58,7 @@
                 if (!captchaResponse) {
             alert("Please verify that you are not a robot.");
             return;
-      
+      }
         
                 
                 // Simulate account creation (In a real app, you would send this data to a server)
@@ -66,7 +67,7 @@
         
                 // Redirect to the login page
                 window.location.href = "index.html";
-              }});
+              });
         </script>
         
 
