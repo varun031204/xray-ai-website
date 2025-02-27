@@ -58,20 +58,6 @@
 .navbar-nav a:hover {
   background-color: #b4b4b4;
 }
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-toggle div {
-  width: 30px;
-  height: 3px;
-  background: black;
-  margin: 5px 0;
-  transition: all 0.3s ease;
-}
-/* Main Contact Section */
 .contact-section {
     display: flex;
     align-items: center;
@@ -182,6 +168,7 @@
     0% { transform: translate(0, 0) rotate(0deg); }
     100% { transform: translate(100px, 100px) rotate(360deg); }
   }
+  
   
 /* Footer */
 .footer {
