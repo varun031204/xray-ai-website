@@ -5,19 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-Ray AI Diagnosis</title>
     <link rel="stylesheet" href="style.css">
-   
-    <link rel="manifest" href="manifest.json">
-    <script>
-      if (!sessionStorage.getItem("loggedIn")) {
-          window.location.href = "login.html";
-      }
-    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     
-   
-
 </head>
 <body>
-   <header>
+  <header>
     <nav class="navbar">
         <a href="index.html" class="navbar-logo">X-Ray MK I</a>
 
@@ -36,6 +28,7 @@
         </ul>
     </nav>
 </header>
+
     <section class="hero">
         <div class="hero-content">
             <h1 class="animate-slide-up" style="animation-delay: 0.5s;">AI-Powered X-Ray Disease Detection</h1>
@@ -132,7 +125,7 @@
     <div class="footer-container">
         <div class="footer-top">
             <div class="footer-brand">
-                <img src="Screenshot 2025-02-25 234903.png" alt="Logo">
+                <img src="logo.png" alt="Logo">
                 <p>We use AI to detect diseases in X-ray images with high accuracy, helping doctors make informed decisions.</p>
                 <div class="app-links">
                     <a href="#"><img src="https://getsby.com/wp-content/uploads/2023/06/google-play-badge.png" alt="Google Play"></a>
@@ -189,16 +182,9 @@
         timelineItems.forEach(item => {
           observer.observe(item);
         });
-        
+
 
     </script>
-     <script>
-       if ('serviceWorker' in navigator) {
-         navigator.serviceWorker.register('/sw.js')
-           .then(() => console.log("Service Worker Registered"))
-           .catch(err => console.error("Service Worker Registration Failed", err));
-       }
-     </script>
- <script src="index.js" crossorigin="anonymous"></script>
+    <script src="script1.js"></script>
 </body>
 </html>
