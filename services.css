@@ -315,7 +315,6 @@ hr {
 }
 
 
-  /* Mobile Navbar */
 @media (max-width: 768px) {
   .navbar-nav {
     position: absolute;
@@ -368,6 +367,46 @@ hr {
   }
 
   .menu-toggle.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+
+  .menu-toggle {
+    display: flex;
+  }
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .timeline-content {
+    width: 90%;
+    margin-top: 10px;
+  }
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-links {
+    width: 100%;
+    justify-content: center;
+}
+
+.footer-links div {
+    margin: 10px 0;
+}
+
+.social-icons {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-info {
+    text-align: center;
+    margin-top: 10px;
+}
+}
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
