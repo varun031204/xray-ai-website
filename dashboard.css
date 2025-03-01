@@ -247,7 +247,7 @@ body {
   
   
   
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
   .navbar-nav {
     position: absolute;
     top: 70px;
