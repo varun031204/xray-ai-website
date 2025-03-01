@@ -14,7 +14,7 @@
   }
   
   /* Navbar */
- .navbar {
+.navbar {
   background: white;
   position: fixed;
   top: 0;
@@ -68,8 +68,9 @@
   height: 3px;
   background: black;
   margin: 5px 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
+
   
   
   /* Hero Section */
