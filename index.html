@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-Ray AI Diagnosis</title>
     <link rel="stylesheet" href="style.css">
+      <link rel="manifest" href="manifest.json">
+    <script>
+      if (!sessionStorage.getItem("loggedIn")) {
+          window.location.href = "login.html";
+      }
+    </script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     
 </head>
