@@ -221,27 +221,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-.social-icons {
-  display: flex;
-  align-items: center;
-}
-
-.social-icons h3 {
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-.social-icons a {
-  color: #555;
-  font-size: 18px;
-  margin-right: 10px;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #007bff;
-}
-
 .footer-info {
   font-size: 14px;
   color: #555;
@@ -253,11 +232,67 @@ hr {
   height: 1px;
   background-color: #ddd;
 }
+@media (max-width: 768px) {
+  .timeline {
+      width: 100%;
+  }
 
+  .timeline-item {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+  }
 
+  .timeline-item.left,
+  .timeline-item.right {
+      left: 0;
+      transform: translateX(0);
+  }
 
+  .timeline-content {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+  }
 
+  .timeline-content img {
+      width: 100%;
+      height: auto;
+      max-height: 180px;
+  }
+}
+@media (max-width: 768px) {
 
+  .navbar-nav li {
+    margin-left: 10px;
+  }
+  .navbar a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .navbar-nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-nav.active {
+    transform: translateY(0);
+  }
+
+  .navbar-nav li {
+    margin: 0;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+  }
+/* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar-nav {
     position: absolute;
@@ -318,15 +353,17 @@ hr {
   .menu-toggle {
     display: flex;
   }
-  .timeline-item {
-    flex-direction: column;
-    text-align: center;
-  }
-  .timeline-content {
-    width: 90%;
-    margin-top: 10px;
-  }
-  .footer-top {
+
+  .hero-content {
+    margin-top: 50px;
+}
+
+.timeline-content {
+    width: 95%;
+    padding: 15px;
+}
+
+.footer-top {
     flex-direction: column;
     text-align: center;
 }
@@ -349,14 +386,5 @@ hr {
     text-align: center;
     margin-top: 10px;
 }
-}
-.social-icons {
-    justify-content: center;
-    margin-top: 10px;
-}
 
-.footer-info {
-    text-align: center;
-    margin-top: 10px;
-}
 }
