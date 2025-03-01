@@ -17,5 +17,5 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   } else {
       console.error("Navbar elements not found. Check your HTML structure.");
-  }
+  }
 });
