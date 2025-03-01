@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navbarNav = document.querySelector(".navbar-nav");
+  
+    document.querySelectorAll(".contact-card").forEach(card => {
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+    });
+
+
 
   if (menuToggle && navbarNav) {
       menuToggle.addEventListener("click", () => {
