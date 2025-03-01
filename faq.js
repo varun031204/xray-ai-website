@@ -1,3 +1,19 @@
+
+document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item h2");
+
+    faqItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const answer = this.nextElementSibling;
+
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        });
+    });
+});
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navbarNav = document.querySelector(".navbar-nav");
@@ -19,4 +35,3 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Navbar elements not found. Check your HTML structure.");
   }
 });
-
